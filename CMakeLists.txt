@@ -10,11 +10,11 @@ aux_source_directory(src SRC_LIST)
 
 # Get Include Directories
 set (INCLUDE_DIRS include
-	deps/glfw/include/GLFW
-	deps/glew/include/GL
-	deps/glm/glm
-	deps/glm/gtc
-	deps/glm/gtx
+	dependencies/glfw/include/GLFW
+	dependencies/glew/include/GL
+	dependencies/glm/glm
+	dependencies/glm/gtc
+	dependencies/glm/gtx
 )
 
 include_directories(${INCLUDE_DIRS})
