@@ -1,5 +1,5 @@
 
-//#include "model/level.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -8,6 +8,7 @@
 #include <GL/glew.h>
 #include <glfw3.h>
 #include <glm/glm.hpp>
+#include "level.h"
 
 GLFWwindow *window;
 
@@ -21,7 +22,7 @@ int main( void )
 		return -1;
 	}
 
-	glfwWindowHint(GLFW_SAMPLES, 16);
+	glfwWindowHint(GLFW_SAMPLES, 32);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -51,17 +52,13 @@ int main( void )
 	const double mili = 0.001;
 	std::chrono::milliseconds oneMilliSecond( 1 );
 
-	//Level level;
-
-	glClearColor(0.2f, 0.22f, 0.2f, 1.0f);
+	Level level;
 
 	while( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS && glfwWindowShouldClose(window) == 0 ){
 
 		double frameStartTime = glfwGetTime();
 
-		glClear(GL_COLOR_BUFFER_BIT);
-
-		//level.render( glfwGetKey(window, GLFW_KEY_SPACE ) == GLFW_PRESS);
+		level.render( glfwGetKey(window, GLFW_KEY_SPACE ) == GLFW_PRESS);
 
 		// Sleep the thread if we are running fast to save computer power.
 		// If we are running too fast and there is more than 1 miliseconds left until
