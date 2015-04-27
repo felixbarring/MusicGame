@@ -1,4 +1,6 @@
 
+#define GLM_FORCE_RADIANS
+
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
