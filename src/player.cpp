@@ -95,8 +95,6 @@ Player::Player(float xOffset, float yOffset, std::vector<Cube> *cubesA):
 		0.0f, -1.0f, 0.0f,
 	};
 
-
-
 	std::vector<short> elementData{
 		0, 1, 2, 0, 2, 3,
 		0+4, 1+4, 2+4, 0+4, 2+4, 3+4,
@@ -128,7 +126,7 @@ void Player::draw()
 	mesh->render();
 }
 
-void Player::tick()
+void Player::tick(float f)
 {
 
 	if (isDead) {
@@ -157,7 +155,7 @@ void Player::tick()
 			yLocation += ySpeed+0.001;
 			ySpeed = 0;
 		} else {
-			ySpeed += 0.01;
+			ySpeed += 0.02;
 		}
 
 		inter = false;
@@ -195,7 +193,7 @@ void Player::jump() {
 	yLocation -= ySpeed;
 	for (Cube c : *cubes) {
 		if (Player::intersect(c)) {
-			ySpeed = -0.2;
+			ySpeed = -0.3;
 		}
 	}
 	yLocation = dummy;

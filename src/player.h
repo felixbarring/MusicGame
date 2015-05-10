@@ -28,7 +28,7 @@ public:
 // ########################################################
 	void draw();
 	glm::mat4& getModelMatrix();
-	void tick();
+	void tick(float f);
 	float getXLocation(){ return xLocation; }
 	bool intersect(Cube &c);
 	void jump();
@@ -51,7 +51,7 @@ private:
 	float width;
 	float height;
 
-	float xSpeed = 0.1;
+	float xSpeed = 0.13;
 	float ySpeed = 0;
 
 	bool isDead = false;

@@ -30,7 +30,7 @@ public:
 private:
 	Player *player;
 	std::vector<Cube> cubes;
-	ShaderProgram* program;
+	ShaderProgram *program;
 	glm::mat4 Projection;
 	glm::mat4 MVP;
 

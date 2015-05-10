@@ -1,8 +1,5 @@
 cd ..
-if [ -d $build]
-then
- rm -r build
-fi
+rm -r build
 mkdir build
 cd build
 cmake ..

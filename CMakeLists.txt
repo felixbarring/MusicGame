@@ -26,9 +26,9 @@ add_executable(${PROJECT_NAME} ${SRC_LIST})
 target_link_libraries(${PROJECT_NAME} libglew_static glfw ${GLFW_LIBRARIES} )
 
 # Define GLEW_STATIC for Windows
-if(MSVC)
-	add_definitions(-DGLEW_STATIC)
-endif()
+#if(MSVC)
+#	add_definitions(-DGLEW_STATIC)
+#endif()
 
 # C++ Standard
 add_definitions( -std=c++0x )
