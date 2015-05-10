@@ -12,8 +12,8 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <vector>
-#include "cube.h"
-#include "mesh.h"
+#include "../cube.h"
+#include "../mesh.h"
 
 class Player {
 public:

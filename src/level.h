@@ -7,7 +7,7 @@
 #include <GL/glew.h>
 
 #include "cube.h"
-#include "player.h"
+#include "entities/player.h"
 #include "shaderProgram.h"
 
 class Level {

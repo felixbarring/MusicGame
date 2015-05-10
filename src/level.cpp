@@ -4,6 +4,7 @@
 #include <GL/glew.h>
 #include <glm/gtx/transform.hpp>
 #include "level.h"
+#include "entities/player.h"
 
 #include <iostream>
 #include <fstream>

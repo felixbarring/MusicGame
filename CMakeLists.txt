@@ -7,6 +7,7 @@ add_subdirectory(dependencies)
 
 # Get all source files from src
 aux_source_directory(src SRC_LIST)
+aux_source_directory(src/entities SRC_LIST2)
 
 # Get Include Directories
 set (INCLUDE_DIRS include
@@ -20,7 +21,7 @@ set (INCLUDE_DIRS include
 include_directories(${INCLUDE_DIRS})
 
 # Add executable to project
-add_executable(${PROJECT_NAME} ${SRC_LIST})
+add_executable(${PROJECT_NAME} ${SRC_LIST} ${SRC_LIST2})
 
 # Link GLFW and GLEW to main executable
 target_link_libraries(${PROJECT_NAME} libglew_static glfw ${GLFW_LIBRARIES} )
